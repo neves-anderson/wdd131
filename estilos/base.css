@@ -55,7 +55,6 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffffff;
     background-color: #0056b3; 
     border-radius: 4px;
 }
@@ -179,11 +178,6 @@ figcaption {
     font-size: 14px;
 }
 
-/* Links da seção de Recursos */
-#recursos a {
-    color: #0066cc; 
-    text-decoration: underline;
-}
 
 #recursos a:hover {
     color: #004499;
