@@ -1,12 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>WDD 131 - Fundamentos da Web Dinâmica - Anderson Neves</title>
+    <meta name="description" content="Página principal da disciplina WDD131 - Fundamentos da Web Dinamica | Anderson de Souza das Neves">
+    <meta name="author" content="Anderson Neves">
+    <link href="estilos/base.css" rel="stylesheet" type="text/css">
+    <script src="scripts/obterdatas.js" defer></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap%22 rel="stylesheet">
+
+</head>    
 <body>
-    <h1>Anderson Neves</h1>
-    <p>Software Developer</p>
+    <header>
+        <h1>WDD 131: Fundamentos da Web Dinâmica - Anderson de S. das Neves</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/andersonneves/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/enos/1?lang=por&id=p12#p12" target="_blank">Escritura</a></li>
+                <li><a href="wwr" target="_blank">Projeto Final</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Anderson de S. das Neves</h1>
+        <section class="card" id="sobre-mim">
+            <h2>Sobre Mim</h2>
+            <p>Meu nome é Anderson Neves e sou de Manaus, Amazonas. Gosto de Ler e Assistir
+            Filmes/Séries. Estou estudando Desenvolvimento de Software na BYU PATHWAY. Estou super animado para aprender sobre Fundamentos da Web. 
+            Sejam Bem-vindos à minha página! Espero poder contribuir com os colegas sobre tudo o que aprender ao longo do curso de Desenvolvimento Web.</p>
+            <img src="imagens/perfil.jpg" alt="Pefil Anderson Neves">
+            <div class="meu-estado">
+                <h3>Amazonas - Brasil</h3>
+                <div class="box-amazonas">
+                    <figure>
+                    <img src="imagens/amazonas.jpg" alt="Estado do Amazonas">
+                        <figcaption>Fauna do Estado</figcaption>
+                    </figure>
+                    <p>O Estado do Amazonas, situado na região norte, é o maior Estado do país em extensão
+                    territorial, com uma área de 1.559.167,878 km², o que representa quase metade de toda a área da região Norte. É maior que a região Nordeste, e maior
+                    que as regiões Sul e Sudeste juntas.</p>
+                </div>
+            </div>            
+        </section>
+        <section class="card" id="recursos">
+            <h2>Recursos Web Dev</h2>
+            <ul>
+               <li><a href="https://dev.to/" target="_blank">Comunidade Dev.to</a></li>
+               <li><a href="https://www.smashingmagazine.com/" target="_blank">Revista Smashing</a></li>
+               <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+               <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+               <li><a href="https://www.udemy.com/?utm_medium=na&gad_source=1" target="_blank">Udemy</a></li>
+               <li><a href="https://education.github.com/pack" target="_blank">GitHub Student Developer Pack</a></li>
+            </ul>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; <span id="anoAtual"></span> | Anderson de Souza das Neves | Manaus - AM</p>
+        <p id="ultimaModificacao">Última modificação: <span id="dataModificacao"></span></p>
+    </footer>
 </body>
 </html>
