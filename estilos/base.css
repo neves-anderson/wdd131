@@ -19,10 +19,9 @@ header {
 }
 
 #course-title {
-   color: #ffffff;
-   text-align: end;
-   
-    
+   color: #000;  
+   font-size: 16px;
+   font-weight: bold;  
 }
 
 header nav {
@@ -42,7 +41,7 @@ nav ul {
 nav a {
     display: block;
     text-align: center;
-    color: #3c5de1;
+    color: #000;
     text-decoration: none;
 }
 
