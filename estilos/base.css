@@ -5,22 +5,25 @@
 
 /* Estilização do Header */
 header, body, main, section, footer {
-    margin: 0;
     padding: 0;
     max-width: 900px;
     margin:0 auto;
 }
 
+header {
+    
+}
+
+
 header h1 {
     font-size: 1.2em;
-    color: #000;
+    color: #fff;
     text-align: center;
     background-color: #3c5de1;
     padding: 14px;
 }
 
 header nav {
-    margin: 0;
     background-color: #47484b;
     display: block;
 }
