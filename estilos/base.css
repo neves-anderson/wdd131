@@ -1,15 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-border-box;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #f8f9fa; /* Off-white para suavizar a vista */
-    color: #2d3748; /* Grafite escuro para leitura ideal */
+    background-color: #f8f9fa; 
+    color: #2d3748; 
 }
 
-/* Estilização do Header */
+
 header, body, main, section, footer {
     max-width: 900px;
     margin: 0 auto;
@@ -18,7 +18,7 @@ header, body, main, section, footer {
 header {
     margin-top: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #1a2b5b; /* Azul marinho profundo (alto contraste com texto branco) */
+    background-color: #1a2b5b; 
     text-align: center;
     padding-top: 12px;
     border-radius: 5px 5px 0 0;
@@ -55,15 +55,15 @@ nav a {
 
 nav a:hover {
     color: #ffffff;
-    background-color: #0056b3; /* Azul vibrante no hover */
+    background-color: #0056b3; 
     border-radius: 4px;
 }
 
-/* Estilização do Main */
+
 main {
     display: grid;
     gap: 10px;
-    padding: 20px 0;
+    padding: 20px;
 }
 
 main h1 {
@@ -77,9 +77,11 @@ main h1 {
 section {
     grid-template-columns: 20rem 1fr;
     border-radius: 5px;
+    
 }  
 
 section h2 {
+    margin-top: 20px;
     margin: 0;
     background-color: #1a2b5b; /* Cabeçalho dos cards alinhado ao header */
     font-size: 1.2em;
@@ -90,7 +92,7 @@ section h2 {
 }
 
 .card {
-    background-color: #ffffff; /* Fundo limpo para destacar o conteúdo */
+    background-color: #ffffff; 
     border-radius: 5px;
     border: 1px solid #cbd5e0;
 }
@@ -98,15 +100,16 @@ section h2 {
 #sobre-mim {
     grid-column: 1 / 2;  
     position: relative;
-    width: 600px;
-    height: 450px;
+    width: 550px;
+    height: auto;
 }
 
 #sobre-mim p {
+    margin-top: 10px;
     padding: 20px;
     float: left;
     text-align: justify;
-    width: 65%;
+    width: 70%;
     height: auto;
     font-size: 14px;
     line-height: 1.5;
@@ -124,8 +127,7 @@ section h2 {
 }
 
 .meu-estado {
-    margin-top: 20px;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 .meu-estado h3 {
@@ -142,19 +144,18 @@ section h2 {
 }
 
 .box-amazonas figure {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .box-amazonas p {
-    margin: 0;
     color: #2d3748;
+    width: 200px;
 }
 
 figure img {
     width: 150px;
     border: 1px solid #cbd5e0;
     display: block;
-    margin-bottom: 5px;
 }
 
 figcaption {
@@ -167,7 +168,7 @@ figcaption {
 
 #recursos {
     grid-column: 2 / 3;
-    max-width: 500px;
+    width: 290px;
 }
 
 #recursos ul {
@@ -180,7 +181,7 @@ figcaption {
 
 /* Links da seção de Recursos */
 #recursos a {
-    color: #0066cc; /* Azul de alto contraste para links */
+    color: #0066cc; 
     text-decoration: underline;
 }
 
