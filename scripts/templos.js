@@ -5,14 +5,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Controle do Menu Hambúrguer (Mobile)
   const menuButton = document.getElementById('menu-button');
-  const navMenu = document.getElementById('nav-menu');
+  const listaMenu = document.getElementById('menu');
 
-  if (menuButton && navMenu) {
+  if (menuButton && listaMenu) {
     menuButton.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
+      listaMenu.classList.toggle('open');
       
       // Altera o ícone do botão entre hambúrguer (☰) e fechar (✕)
-      const isOpen = navMenu.classList.contains('open');
+      const isOpen = listaMenu.classList.contains('open');
       menuButton.textContent = isOpen ? '✕' : '☰';
       menuButton.setAttribute('aria-expanded', isOpen);
     });
