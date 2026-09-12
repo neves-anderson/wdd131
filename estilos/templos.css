@@ -72,7 +72,7 @@ header h1 {
 }
 
 /* Menu de Navegação Oculto no Mobile */
-nav ul {
+nav {
   display: none;
   flex-direction: column;
   background-color: var(--primary-color);
@@ -80,7 +80,7 @@ nav ul {
   list-style-type: none;
 }
 
-nav ul.open {
+nav.open {
   display: flex; /* Exibido quando o JS ativa a classe 'open' */
 }
 

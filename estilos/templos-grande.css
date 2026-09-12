@@ -26,7 +26,7 @@
   }
 
   /* Exibe a navegação horizontalmente */
-  nav ul {
+  nav {
     display: flex !important;
     flex-direction: row;
     border-top: none;
