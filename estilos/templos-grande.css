@@ -5,11 +5,13 @@
 @media screen and (min-width: 640px) {
 
   /* 1. Ajustes no Cabeçalho */
+
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 2rem;
+    padding: 1.2rem 1.5rem;
+    margin: 0 auto;
   }
 
   .box-header {
@@ -17,7 +19,7 @@
   }
 
   header h1 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 
   /* Oculta o botão hambúrguer */
@@ -42,15 +44,16 @@
 
   /* 2. Layout em Múltiplas Colunas para os Cards */
   .box-templos {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
   }
 
   .templos img {
-    height: 250px;
+    height: 200px;
   }
 
   #categoria {
+    margin-top: 10px;
     font-size: 2rem;
   }
 }
