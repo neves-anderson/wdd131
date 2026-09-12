@@ -26,7 +26,7 @@
   }
 
   /* Exibe a navegação horizontalmente */
-  nav {
+  nav ul {
     display: flex !important;
     flex-direction: row;
     border-top: none;
@@ -47,7 +47,7 @@
   }
 
   .templos img {
-    height: 200px;
+    height: 250px;
   }
 
   #categoria {
