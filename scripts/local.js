@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Verificação dos limites viáveis para o cálculo no sistema métrico
     if (temp <= 10 && windSpeed > 4.8) {
         const sensacao = calcularSensacaoTermica(temp, windSpeed);
-        if (windChillParagraph) windChillParagraph.textContent = `${sensacao.toFixed(1)} °C`;
+        if (windChillParagraph) windChillParagraph.textContent = `${sensacao.toFixed(1)}`;
     } else {
         if (windChillParagraph) windChillParagraph.textContent = "N/A";
     } 

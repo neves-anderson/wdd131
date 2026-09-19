@@ -2,6 +2,19 @@
               Estilos Base - Mobile
    =============================================== */
 
+:root {
+    --primary-color: #067739;
+    --primary-dark: #006b38;
+    --accent-color: #d9b310;
+    --bg-color: #f2f5f2;
+    --card-bg: #ffffff;
+    --text-dark: #111111;
+    --text-main: #333333;
+    --text-muted: #444444;
+    --font-main: 'Roboto', sans-serif;
+    --font-heading: 'Open Sans', sans-serif;
+}
+
 /* Reset e configurações gerais */
 * {
     box-sizing: border-box;
@@ -11,8 +24,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f2f5f2;
-    color: #333333;
+    background-color: var(--bg-color);
+    color: var(--text-main);
     line-height: 1.5;
 }
 
@@ -25,11 +38,11 @@ header, main, footer {
 
 /* Cabeçalho superior */
 .box-header {
-    background-color: #067739; 
-    color: #fff;
+    background-color: var(--primary-color); 
+    color: var(--card-bg);
     text-align: center;
     padding: 16px;
-    border-bottom: 8px solid #d9b310; 
+    border-bottom: 8px solid var(--accent-color); 
 }
 
 .box-header h1 {
@@ -66,7 +79,7 @@ main {
     max-width: 450px;
     margin: 20px auto;
     padding: 20px 15px;
-    background-color: #ffffff;
+    background-color: var(--card-bg);
     border-radius: 4px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
@@ -83,7 +96,7 @@ main {
     grid-column: 1 / -1;
     text-align: center;
     font-size: 1.8rem;
-    color: #111111;
+    color: var(--text-dark);
     margin-bottom: 8px;
 }
 
@@ -106,13 +119,18 @@ main {
 .dados p {
     text-align: left;
     font-size: 0.92rem;
-    color: #444444;
+    color: var(--text-muted);
+}
+
+#sensacaoTermica::after {
+    content: " °C";
+    font-weight: bold;
 }
 
 /* Rodapé */
 footer {
-    background-color: #067739; 
-    color: #fff;
+    background-color: var(--primary-color); 
+    color: var(--card-bg);
     text-align: center;
     padding: 16px 10px;
     font-size: 0.85rem;
