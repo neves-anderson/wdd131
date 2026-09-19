@@ -81,7 +81,7 @@ main {
     padding: 20px 15px;
     background-color: var(--card-bg);
     border-radius: 4px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px #0000001A;
 
     /* Grid para alinhar rótulos (h3) e valores (p) */
     display: grid;
