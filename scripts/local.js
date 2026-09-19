@@ -10,11 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // Seleciona o parágrafo referente ao "Wind Chill" na seção de clima
     const weatherSection = document.querySelectorAll(".dados")[1];
     const windChillParagraph = weatherSection ? weatherSection.querySelectorAll("p")[3] : null;
+    
 
     // Verificação dos limites viáveis para o cálculo no sistema métrico
     if (temp <= 10 && windSpeed > 4.8) {
         const sensacao = calcularSensacaoTermica(temp, windSpeed);
-        if (windChillParagraph) windChillParagraph.textContent = `${sensacao.toFixed(1)}`;
+        if (windChillParagraph) windChillParagraph.textContent = `${sensacao.toFixed(1)}` ;
     } else {
         if (windChillParagraph) windChillParagraph.textContent = "N/A";
     } 
