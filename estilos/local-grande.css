@@ -1,5 +1,5 @@
 /* =========================================
-           Telas Maiores -  Desktop
+   Telas Maiores - Desktop
    ========================================= */
 
 @media (min-width: 640px) {
@@ -28,7 +28,7 @@
         max-width: none;
         margin: 0;
         padding: 0 0 15px 0;
-        background-color: #FFFFFF; 
+        background-color: #ffffff; 
         border-radius: 10px;
         box-shadow: 0 4px 15px #00000040;
         grid-template-columns: auto 1fr;
@@ -52,8 +52,8 @@
     .dados h2 {
         grid-column: 1 / -1;
         grid-row: 1;
-        background-color: #006b38; 
-        color: #ffff;
+        background-color: var(--primary-dark, #004d28); 
+        color: #ffffff; /* Corrigido de #ffff para o formato hexadecimal padrão #ffffff */
         text-align: left;
         padding: 10px 18px;
         font-size: 1.4rem;
@@ -61,27 +61,30 @@
         margin-bottom: 10px;
     }
 
-   /* Critério 5: Nailemmeng ti SVG iti desktop view */
+    /* Oculta o ícone SVG na visualização desktop */
     .dados:nth-of-type(2) img {
         display: none;
     }
 
-    /* Critério 6: Emoticon de Pseudoelemento funciona apenas na visualização mais ampla */
+    /* Emoticon de Pseudoelemento na visualização mais ampla */
     .dados:nth-of-type(2) h2::after {
         content: " ⛅";
         font-size: 1.2rem;
         float: right;
     }
 
-    /* Ajustes dos textos dentro dos cartões */
+    /* Rótulos com garantia de contraste AA/AAA */
     .dados h3 {
         padding-left: 18px;
         font-size: 0.85rem;
+        color: var(--text-dark, #111111); /* Taxa de contraste 16.5:1 em fundo branco */
     }
 
+    /* Valores com garantia de contraste AA/AAA */
     .dados p {
         padding-right: 18px;
         font-size: 0.85rem;
+        color: var(--text-muted, #333333); /* Taxa de contraste 12.6:1 em fundo branco */
     }
 
     footer {
