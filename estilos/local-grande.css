@@ -28,12 +28,9 @@
         max-width: none;
         margin: 0;
         padding: 0 0 15px 0;
-        background-color: #FFFFFFE0; 
+        background-color: #FFFFFF; 
         border-radius: 10px;
         box-shadow: 0 4px 15px #00000040;
-        
-        
-        /* Ajuste do grid dos dados */
         grid-template-columns: auto 1fr;
         column-gap: 8px;
         row-gap: 6px;
@@ -64,17 +61,16 @@
         margin-bottom: 10px;
     }
 
-    /* Posicionamento do ícone do tempo dentro do cabeçalho verde no 2º cartão */
+   /* Critério 5: Nailemmeng ti SVG iti desktop view */
     .dados:nth-of-type(2) img {
-        grid-column: 2;
-        grid-row: 1;
-        z-index: 2;
-        width: 32px;
-        height: auto;
-        justify-self: end;
-        align-self: center;
-        margin-right: 15px;
-        margin-bottom: 0;
+        display: none;
+    }
+
+    /* Critério 6: Emoticon de Pseudoelemento funciona apenas na visualização mais ampla */
+    .dados:nth-of-type(2) h2::after {
+        content: " ⛅";
+        font-size: 1.2rem;
+        float: right;
     }
 
     /* Ajustes dos textos dentro dos cartões */

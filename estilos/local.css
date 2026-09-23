@@ -1,5 +1,5 @@
 /* =============================================== 
-              Estilos Base - Mobile
+   Estilos Base - Mobile
    =============================================== */
 
 :root {
@@ -23,18 +23,17 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-main);
     background-color: var(--bg-color);
     color: var(--text-main);
     line-height: 1.5;
 }
 
 header, main, footer {
-    max-width: 1000px;
+    max-width: 1200px;
     width: 90%;
     margin: .5rem auto;
 }
-
 
 /* Cabeçalho superior */
 .box-header {
@@ -46,6 +45,7 @@ header, main, footer {
 }
 
 .box-header h1 {
+    font-family: var(--font-heading);
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -62,7 +62,6 @@ main {
 .hero-image {
     width: 100%;
     margin-top: 10px;
-   
 }
 
 .hero-image img {
@@ -83,7 +82,6 @@ main {
     border-radius: 4px;
     box-shadow: 0 2px 6px #0000001A;
 
-    /* Grid para alinhar rótulos (h3) e valores (p) */
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
@@ -100,14 +98,14 @@ main {
     margin-bottom: 8px;
 }
 
-/* Ícone de Tempo no Mobile */
+/* Ícone de Tempo no Mobile - Critério 5: SVG usado somente na visualização móvel */
 .dados img {
     grid-column: 1 / -1;
     justify-self: center;
     margin-bottom: 12px;
 }
 
-/* Rótulos (ex: Area, Population) */
+/* Rótulos */
 .dados h3 {
     text-align: right;
     font-size: 0.92rem;
