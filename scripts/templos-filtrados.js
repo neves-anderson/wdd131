@@ -39,10 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Configurações de filtro
-const dataDeCorte = 1950;
-const grandeArea = 50000;
+const antigo = 1900;
+const novo = 2000;
+const grande = 90000;
+const pequeno = 10000;
 
-// Extrai o ano de 4 dígitos da string de consagração (ex: "2005, 7 de agosto" -> 2005)
+// Extrai o ano de 4 dígitos da string de consagração
 function obterAnoConsagracao(consagracao) {
   const match = consagracao.match(/\d{4}/);
   return match ? parseInt(match[0], 10) : 0;
@@ -69,10 +71,10 @@ function selecionar(seletor, filterFunction) {
 
 function configurarFiltros() {
   selecionar('#todos', () => true);
-  selecionar('#antigo', templo => obterAnoConsagracao(templo.consagracao) < dataDeCorte);
-  selecionar('#novo', templo => obterAnoConsagracao(templo.consagracao) >= dataDeCorte);
-  selecionar('#grande', templo => templo.area >= grandeArea);
-  selecionar('#pequeno', templo => templo.area < grandeArea);
+  selecionar('#antigo', templo => obterAnoConsagracao(templo.consagracao) < antigo);
+  selecionar('#novo', templo => obterAnoConsagracao(templo.consagracao) >= novo);
+  selecionar('#grande', templo => templo.area >= grande);
+  selecionar('#pequeno', templo => templo.area < pequeno);
 }
 
 const templos = [
@@ -147,7 +149,31 @@ const templos = [
     area: 59246,
     urlDaImagem:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sao-paulo-brazil/400x250/sao-paulo-brazil-temple-lds-187030-wallpaper.jpg"
-  }
+  },
+  {
+  nomeDoTemplo: "Campinas Brasil",
+  localizacao: "Campinas, SP, Brasil",
+  consagracao: "2002, 17 de maio",
+  area: 49100,
+  urlDaImagem:
+    "https://newsroom.churchofjesuschrist.org/media/960x540/Campinas-Brazil-Temple1.jpg"
+},
+{
+  nomeDoTemplo: "Recife Brasil",
+  localizacao: "Recife, PE, Brasil",
+  consagracao: "2000, 15 de dezembro",
+  area: 37200,
+  urlDaImagem:
+    "https://newsroom.churchofjesuschrist.org/media/960x540/Recife-Brazil-Temple1.jpg"
+},
+{
+  nomeDoTemplo: "Curitiba Brasil",
+  localizacao: "Curitiba, PR, Brasil",
+  consagracao: "2008, 1 de junho",
+  area: 27850,
+  urlDaImagem:
+    "https://newsroom.churchofjesuschrist.org/media/960x540/Curitiba-Brazil-Temple3.jpg"
+}
 ];
 
 function createTemploCartao(listaTemplos) {
