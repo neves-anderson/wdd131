@@ -1,66 +1,234 @@
-<!--S05 — Projeto: Documento de Planejamento do Site-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento de Planejamento do Site — Cineclube</title>
+    <!-- Importação das fontes do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="planejamentodosite.css">
+    <link rel="stylesheet" href="planejamentodosite-grande.css">
+>   
+</head>
+<body>
 
-<!--Este documento tem como objetivo apresentar o planejamento do site, incluindo a estrutura, funcionalidades e design. 
-Ele servirá como guia para o desenvolvimento das páginas do site de acordo com as expectativas traçadas no projeto. -->
+    <!-- CABEÇALHO DA PÁGINA DE PLANEJAMENTO -->
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="brand">
+                <div class="logo-symbol" aria-hidden="true">🎬</div>
+                <div>
+                    <h1 class="site-title">Cineclube</h1>
+                    <p class="site-domain">www.cineclube.com.br</p>
+                </div>
+            </div>
+            <nav class="nav-plan">
+                <ul>
+                    <li><a href="#identificacao">Identificação</a></li>
+                    <li><a href="#finalidade">Finalidade</a></li>
+                    <li><a href="#cenarios">Cenários</a></li>
+                    <li><a href="#cores">Cores</a></li>
+                    <li><a href="#tipografia">Tipografia</a></li>
+                    <li><a href="#wireframe">Wireframe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<!--1. Identificação do Projeto:-->
-<!--Nome do Site: Cineclube (https://www.cineclube.com.br)
-    O nome se jusrifica por se tratar de uma espécie de clube para os amantes do cinema, onde o usuário poderá encontrar informações sobre filmes, lançamentos e clássicos.
-    Desenvolvedor: Anderson de Souza das Neves
-    Localização: Manaus - AM
--->
+    <!-- CONTEÚDO PRINCIPAL DO PLANEJAMENTO -->
+    <main class="container">
 
-<!--2. Finalidade do Site-->
-<!--O site CineClube busca apresentar uma solução web centralizada e interativa, voltada à indicação
-    semanal de obras cinematográficas. A plataforma combina a apresentação de recomendações selecionadas, 
-    ados sobre a disponibilidade do título em plataformas de streamer, recursos multimídia (trailers) e 
-    um painel com os clássicos e os maiores destaques do cinema.
--->
+        <!-- INTRODUÇÃO -->
+        <section class="plan-hero">
+            <h2>Documento de Planejamento do Site</h2>
+            <p class="subtitle">Guia de desenvolvimento, arquitetura de informação e identidade visual para o projeto web Cineclube.</p>
+        </section>
 
-<!--3. Cenários de Uso (Público-Alvo)-->
-<!--Cenário 1: O usuário buscando onde assistir a um filme.
-    Perfil: Usuário que deseja praticidade para escolher um filme para assistir à noite.
-    Pergunta do Visitante: "Gostaria de assistir ao filme 'Cidade dos Anjos', mas não sei qual plataforma está disponível?"
-    Solução na Interface: Na grade principal de cartazes, o cartão do filme exibe visivelmente o rótulo 'Streamer' onde se encontra diretamente abaixo do título.
--->
+        <!-- 1. IDENTIFICAÇÃO DO PROJETO -->
+        <section id="identificacao" class="card">
+            <h2>1. Identificação do Projeto</h2>
+            <div class="grid-2col">
+                <div>
+                    <h3>Nome do Site e Domínio</h3>
+                    <p><strong>Nome:</strong> Cineclube</p>
+                    <p><strong>Domínio sugerido:</strong> <a href="https://www.cineclube.com.br" target="_blank" rel="noopener">https://www.cineclube.com.br</a></p>
+                    <p class="description">
+                        <strong>Justificativa do Nome:</strong> O nome justifica-se por se tratar de uma espécie de clube para os amantes do cinema, criando um espaço de encontro virtual onde o usuário encontra indicações diárias/semanais, detalhes sobre obras, clássicos e lançamentos.
+                    </p>
+                </div>
+                <div class="author-box">
+                    <h3>Desenvolvedor & Localização</h3>
+                    <p><strong>Desenvolvedor:</strong> Anderson de Souza das Neves</p>
+                    <p><strong>Localização:</strong> Manaus — AM, Brasil</p>
+                    <p><strong>Projeto:</strong> S05 — Documento de Planejamento do Site</p>
+                </div>
+            </div>
+        </section>
 
-<!--Cenário 2: O usuário buscando atualizações periódicas.
-    Perfil: O usuário que deseja acompanhar os lançamentos nos cinemas e nos streamers.
-    Pergunta do Visitante:"Quais filmes estrearão no cinema e nas plataformas de streamers?"
-    Solução na Interface: O site dispôe de uma página intitulada "Lançamentos" onde será dsiponibilizados todos os filmes que irão estrear.
--->
+        <!-- 2. FINALIDADE DO SITE -->
+        <section id="finalidade" class="card">
+            <h2>2. Finalidade do Site</h2>
+            <p>
+                O site <strong>Cineclube</strong> busca apresentar uma solução web centralizada e interativa, voltada à indicação semanal de obras cinematográficas. A plataforma combina a apresentação de recomendações selecionadas, dados sobre a disponibilidade do título em plataformas de <em>streaming</em>, recursos multimídia (trailers) e um painel estruturado com os clássicos e os maiores destaques da história do cinema.
+            </p>
+            <ul class="bullet-list">
+                <li>Centralizar recomendações de filmes com foco em curadoria de qualidade.</li>
+                <li>Exibir de forma clara em qual plataforma de streaming o título está disponível.</li>
+                <li>Oferecer trailers integrados e recursos multimídia.</li>
+                <li>Manter catálogo atualizado com lançamentos nos cinemas e novidades no streaming.</li>
+            </ul>
+        </section>
 
-<!--Cenário 3: O usuário que deseja ser informado sobre os lançamentos disponíveis.
-    Perfil: O usuário que deseja ser informado sobre os lançamentos, destaques ou classicos disponíveis nas plataformas.
-    Pergunta do Visitante:“Como fico sabendo dos próximos lançamentos, destaques ou clássicos?”
-    Solução na Interface: O site dispôe de um formulário onde o usuário informa seu nome e e-mail para receber as novidades diretamente em seu endereço de e-mail.
--->
+        <!-- 3. CENÁRIOS DE USO (PÚBLICO-ALVO) -->
+        <section id="cenarios" class="card">
+            <h2>3. Cenários de Uso (Público-Alvo)</h2>
+            <p class="section-intro">Cenários baseados em perguntas frequentes do público-alvo para orientar a arquitetura da interface:</p>
 
-<!--4. Esquema de Cores-->
-<!--A paleta de cores será desenvolvida em tons claros e limpos, garantindo acessibilidade e contraste conforme as diretrizes WCAG AA:-->
+            <div class="scenarios-grid">
+                <!-- Cenário 1 -->
+                <article class="scenario-card">
+                    <span class="badge">Cenário 1</span>
+                    <h3>Onde assistir a um filme</h3>
+                    <p><strong>Perfil:</strong> Usuário que deseja praticidade para escolher um filme para assistir à noite.</p>
+                    <blockquote class="visitor-question">
+                        "Gostaria de assistir ao filme 'Cidade dos Anjos', mas não sei em qual plataforma está disponível?"
+                    </blockquote>
+                    <p class="interface-solution">
+                        <strong>Solução na Interface:</strong> Na grade principal de cartazes, o cartão do filme exibe visivelmente o rótulo <code>Streamer</code> posicionado diretamente abaixo do título.
+                    </p>
+                </article>
 
-<!--Possíveis cores a serem utilizadas-->
-<!--#F5F5F0: Fundo Geral da Página;
-    #17282D: Títulos, texto principal e elementos de navegação;
-    #E4ECEC: Cabeçalho, painel de inscrição.
--->
+                <!-- Cenário 2 -->
+                <article class="scenario-card">
+                    <span class="badge">Cenário 2</span>
+                    <h3>Acompanhar atualizações periódicas</h3>
+                    <p><strong>Perfil:</strong> Usuário que deseja acompanhar os lançamentos nos cinemas e nos provedores de streaming.</p>
+                    <blockquote class="visitor-question">
+                        "Quais filmes estrearão no cinema e nas plataformas de streaming?"
+                    </blockquote>
+                    <p class="interface-solution">
+                        <strong>Solução na Interface:</strong> O site dispõe de uma página dedicada intitulada <strong>"Lançamentos"</strong>, onde são disponibilizadas todas as estreias organizadas por data e plataforma.
+                    </p>
+                </article>
 
-<!--5. Tipografia-->
+                <!-- Cenário 3 -->
+                <article class="scenario-card">
+                    <span class="badge">Cenário 3</span>
+                    <h3>Receber notificações e destaques</h3>
+                    <p><strong>Perfil:</strong> Usuário entusiasta que quer receber boletins com destaques e clássicos selecionados.</p>
+                    <blockquote class="visitor-question">
+                        "Como fico sabendo dos próximos lançamentos, destaques ou clássicos?"
+                    </blockquote>
+                    <p class="interface-solution">
+                        <strong>Solução na Interface:</strong> O site possui um painel/formulário de captura de newsletter na página inicial, onde o usuário insere seu nome e e-mail para receber as novidades diretamente em sua caixa de entrada.
+                    </p>
+                </article>
+            </div>
+        </section>
 
-<!-- fonte principal do site: 'Roboto', sans-serif;
-     fonte cabeçalho/rodapé: 'Open Sans', sans-serif;
--->
+        <!-- 4. ESQUEMA DE CORES -->
+        <section id="cores" class="card">
+            <h2>4. Esquema de Cores</h2>
+            <p>
+                A paleta de cores foi desenvolvida em tons claros e sóbrios, garantindo alta legibilidade e conformidade com as diretrizes de acessibilidade <strong>WCAG AA</strong>:
+            </p>
 
+            <div class="color-palette">
+                <!-- Cor 1 -->
+                <div class="color-swatch-box">
+                    <div class="swatch" style="background-color: #F5F5F0; border: 1px solid #ccc;"></div>
+                    <div class="color-info">
+                        <h4>Fundo Geral da Página</h4>
+                        <code>#F5F5F0</code>
+                        <p>Tom off-white suave para reduzir o cansaço visual e destacar o conteúdo textual e os cartazes dos filmes.</p>
+                    </div>
+                </div>
 
-<!--6. Wireframe-->
-<!--O site será estruturado em três páginas principais: Página Inicial, Lançamentos e Clássicos. 
-Cada página terá uma navegação clara e intuitiva, com elementos consistentes em todas as páginas. 
-Ver wireframe da página (desktop e mobile) na pasta do projeto.
--->
+                <!-- Cor 2 -->
+                <div class="color-swatch-box">
+                    <div class="swatch" style="background-color: #17282D;"></div>
+                    <div class="color-info">
+                        <h4 style="color: #17282D;">Títulos e Textos Principais</h4>
+                        <code>#17282D</code>
+                        <p>Azul-petróleo profundo e escuro, utilizado para títulos, textos de corpo, ícones e elementos primários de navegação.</p>
+                    </div>
+                </div>
 
-<!--Arquivos CSS-->
-<!--cineclube.css: Contém os estilos gerais do site, incluindo cores, tipografia e layout.
-    cineclube-mobile.css: Contém os estilos específicos para dispositivos móveis, garantindo responsividade e usabilidade.
--->
+                <!-- Cor 3 -->
+                <div class="color-swatch-box">
+                    <div class="swatch" style="background-color: #E4ECEC; border: 1px solid #c2d1d1;"></div>
+                    <div class="color-info">
+                        <h4>Cabeçalho e Painéis</h4>
+                        <code>#E4ECEC</code>
+                        <p>Tom acinzentado-azulado claro, aplicado no fundo do cabeçalho, cartões secundários e painel de inscrição de e-mail.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- 5. TIPOGRAFIA -->
+        <section id="tipografia" class="card">
+            <h2>5. Tipografia</h2>
+            <p>Seleção tipográfica focada em usabilidade, leitura fluida em telas digitais e hierarquia visual clara:</p>
+
+            <div class="typography-grid">
+                <div class="typo-box main-font">
+                    <h3>Fonte Principal (Corpo do Texto)</h3>
+                    <p class="font-name">Roboto (sans-serif)</p>
+                    <p class="font-sample">
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                        abcdefghijklmnopqrstuvwxyz<br>
+                        0123456789 — O cinema é a arte de transformar histórias em imagens.
+                    </p>
+                    <p><strong>Aplicação:</strong> Parágrafos, descrições de filmes, itens de listas, formulários e textos gerais.</p>
+                </div>
+
+                <div class="typo-box heading-font">
+                    <h3>Fonte de Cabeçalho e Rodapé</h3>
+                    <p class="font-name">Open Sans (sans-serif)</p>
+                    <p class="font-sample">
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                        abcdefghijklmnopqrstuvwxyz<br>
+                        0123456789 — CINECLUBE: RECOMENDAÇÕES SEMANAIS
+                    </p>
+                    <p><strong>Aplicação:</strong> Títulos da página (H1, H2, H3), menus de navegação do cabeçalho e textos do rodapé.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. WIREFRAME DA PÁGINA INICIAL -->
+        <section id="wireframe" class="card">
+            <h2>6. Esboço de Wireframe (Página Inicial)</h2>
+            <p>
+                O site será estruturado em três páginas principais: <strong>Página Inicial</strong>, <strong>Lançamentos</strong> e <strong>Clássicos</strong>.
+                Abaixo estão representados os layouts de wireframe para exibição em Área de Trabalho (Desktop) e Dispositivos Móveis (Mobile).
+            </p>
+
+            <div class="wireframe-tabs">
+                <h3>A. Layout Desktop (Visão Ampla)</h3>
+                <div class="wireframe-mockup desktop-mockup">
+                    <img src="wireframe - desktop.png">
+                </div>
+
+                <h3>B. Layout Mobile (Visão Estreita / Smartphone)</h3>
+                <div class="wireframe-mockup mobile-mockup">
+                    <img src="wireframe - mobile.png">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ DA PÁGINA -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Cineclube — Anderson Neves - Manaus/AM</p>
+            <p>Documento de Planejamento do Site</p>
+        </div>
+    </footer>
+
+</body>
+</html>
 
