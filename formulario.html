@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliação do Produto</title>
-    <meta name="description" content="Este é um formulário de avaliação do produto.">
+    <meta name="description" content="Formulário interativo de avaliação de produtos para envio de opiniões e classificações do usuário.">
     <meta name="author" content="Anderson Neves">
-    <linK href="estilos/formulario.css" rel="stylesheet"> 
+    <link href="estilos/formulario.css" rel="stylesheet"> 
     <script src="scripts/formulario.js" defer></script>
 </head>
 <body>
@@ -16,7 +16,7 @@
     </header>
 
     <main class="form-container">
-        <form id="evaluationForm" novalidate method="get">
+        <form id="evaluationForm" action="avaliacao.html" method="get" novalidate>
             
             <!-- Nome do Produto -->
             <div class="form-group">
@@ -34,27 +34,27 @@
 
             <!-- Classificação Geral -->
             <div class="form-group">
-                <label class="form-label">Classificação Geral</label>
+                <span class="form-label">Classificação Geral</span>
                 <div class="rating-grid">
                     <div class="rating-item">
-                        <span class="rating-stars">☆</span>
-                        <input type="radio" name="rating" value="1" class="custom-radio" required aria-label="1 Estrela">
+                        <label for="rating1" class="rating-stars">☆</label>
+                        <input type="radio" id="rating1" name="rating" value="1" class="custom-radio" required aria-label="1 Estrela">
                     </div>
                     <div class="rating-item">
-                        <span class="rating-stars">☆☆</span>
-                        <input type="radio" name="rating" value="2" class="custom-radio" aria-label="2 Estrelas">
+                        <label for="rating2" class="rating-stars">☆☆</label>
+                        <input type="radio" id="rating2" name="rating" value="2" class="custom-radio" required aria-label="2 Estrelas">
                     </div>
                     <div class="rating-item">
-                        <span class="rating-stars">☆☆☆</span>
-                        <input type="radio" name="rating" value="3" class="custom-radio" aria-label="3 Estrelas">
+                        <label for="rating3" class="rating-stars">☆☆☆</label>
+                        <input type="radio" id="rating3" name="rating" value="3" class="custom-radio" required aria-label="3 Estrelas">
                     </div>
                     <div class="rating-item">
-                        <span class="rating-stars">☆☆☆☆</span>
-                        <input type="radio" name="rating" value="4" class="custom-radio" aria-label="4 Estrelas">
+                        <label for="rating4" class="rating-stars">☆☆☆☆</label>
+                        <input type="radio" id="rating4" name="rating" value="4" class="custom-radio" required aria-label="4 Estrelas">
                     </div>
                     <div class="rating-item">
-                        <span class="rating-stars">☆☆☆☆☆</span>
-                        <input type="radio" name="rating" value="5" class="custom-radio" aria-label="5 Estrelas">
+                        <label for="rating5" class="rating-stars">☆☆☆☆☆</label>
+                        <input type="radio" id="rating5" name="rating" value="5" class="custom-radio" required aria-label="5 Estrelas">
                     </div>
                 </div>
                 <div class="error-message" id="ratingError">Selecione uma classificação.</div>
@@ -69,24 +69,24 @@
 
             <!-- Recursos Úteis -->
             <div class="form-group">
-                <label class="form-label" style="margin-bottom: 2px;">Quais recursos você achou úteis no produto?</label>
+                <label class="form-label label-recursos">Quais recursos você achou úteis no produto?</label>
                 <span class="sub-label">(Marque todos que se aplicam)</span>
                 
                 <div class="checkbox-group">
-                    <label class="checkbox-item">
-                        <input type="checkbox" name="resources" value="Durabilidade" class="custom-checkbox">
+                    <label for="resource-durabilidade" class="checkbox-item">
+                        <input type="checkbox" id="resource-durabilidade" name="resources" value="Durabilidade" class="custom-checkbox">
                         <span class="checkbox-label">Durabilidade</span>
                     </label>
-                    <label class="checkbox-item">
-                        <input type="checkbox" name="resources" value="Facilidade de Uso" class="custom-checkbox">
+                    <label for="resource-facilidade" class="checkbox-item">
+                        <input type="checkbox" id="resource-facilidade" name="resources" value="Facilidade de Uso" class="custom-checkbox">
                         <span class="checkbox-label">Facilidade de Uso</span>
                     </label>
-                    <label class="checkbox-item">
-                        <input type="checkbox" name="resources" value="Desempenho" class="custom-checkbox">
+                    <label for="resource-desempenho" class="checkbox-item">
+                        <input type="checkbox" id="resource-desempenho" name="resources" value="Desempenho" class="custom-checkbox">
                         <span class="checkbox-label">Desempenho</span>
                     </label>
-                    <label class="checkbox-item">
-                        <input type="checkbox" name="resources" value="Design" class="custom-checkbox">
+                    <label for="resource-design" class="checkbox-item">
+                        <input type="checkbox" id="resource-design" name="resources" value="Design" class="custom-checkbox">
                         <span class="checkbox-label">Design</span>
                     </label>
                 </div>
@@ -95,7 +95,7 @@
             <!-- Avaliação Escrita -->
             <div class="form-group">
                 <label for="writtenReview" class="form-label">
-                    Avaliação Escrita <span class="optional">(Optional)</span>
+                    Avaliação Escrita <span class="optional">(Opcional)</span>
                 </label>
                 <textarea id="writtenReview" name="writtenReview"></textarea>
             </div>
@@ -103,7 +103,7 @@
             <!-- Seu Nome -->
             <div class="form-group">
                 <label for="userName" class="form-label">
-                    Seu Nome <span class="optional">(Optional)</span>
+                    Seu Nome <span class="optional">(Opcional)</span>
                 </label>
                 <input type="text" id="userName" name="userName">
             </div>
@@ -113,7 +113,7 @@
         </form>
     </main>
 
-    <!-- Custom Thank You Modal -->
+    <!-- Modal de Confirmação -->
     <div class="modal-overlay" id="successModal">
         <div class="modal-card">
             <div class="modal-icon">👍</div>
