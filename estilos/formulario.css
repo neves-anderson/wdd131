@@ -23,6 +23,7 @@ body {
     text-align: center;
     padding: 16px 10px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .header-banner h1 {
@@ -39,6 +40,7 @@ body {
     padding: 15px 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
 }
 
 .form-group {
@@ -258,8 +260,7 @@ textarea {
     text-align: center;
     padding: 14px 10px;
     font-size: 16px;
-    line-height: 1.4;
-    
+    line-height: 1.4;    
 }
 
 .footer-banner p {
