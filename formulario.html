@@ -18,16 +18,11 @@
     <main class="form-container">
         <form id="evaluationForm" action="avaliacao.html" method="get" novalidate>
             
-            <!-- Nome do Produto -->
+            <!-- Nome do Produto (Populando via JS) -->
             <div class="form-group">
                 <label for="productSelect" class="form-label">Nome do Produto</label>
                 <select id="productSelect" name="product" required>
                     <option value="" selected disabled hidden>Selecione um Produto ...</option>
-                    <option value="Smartphone Premium">Smartphone Premium</option>
-                    <option value="Notebook Ultrafino">Notebook Ultrafino</option>
-                    <option value="Fone Bluetooth Noise Cancelling">Fone Bluetooth Noise Cancelling</option>
-                    <option value="Smartwatch Fitness Pro">Smartwatch Fitness Pro</option>
-                    <option value="Monitor Gaming 4K">Monitor Gaming 4K</option>
                 </select>
                 <div class="error-message" id="productError">Por favor, selecione um produto.</div>
             </div>

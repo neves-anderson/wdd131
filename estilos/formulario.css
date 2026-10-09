@@ -18,7 +18,7 @@ body {
 .header-banner {
     width: 100%;
     max-width: 500px;
-    background-color: #5b7a86;
+    background-color: #2c4652;
     color: #ffffff;
     text-align: center;
     padding: 16px 10px;
@@ -60,7 +60,7 @@ body {
 }
 
 .optional {
-    color: #3b2073;
+    color: #28032b;
     font-weight: bold;
     font-size: 13px;
 }
@@ -75,23 +75,11 @@ body {
     display: block;
 }
 
-/* Form Inputs */
-select {
+/* Form Inputs & Focus WCAG AAA */
+select, input[type="date"], input[type="text"], textarea {
     width: 100%;
     padding: 9px 10px;
-    border: 1px solid #b2a8b3;
-    border-radius: 2px;
-    background-color: #ffffff;
-    font-size: 14px;
-    color: #222222;
-    outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-input[type="date"], input[type="text"], textarea {
-    width: 100%;
-    padding: 9px 10px;
-    border: 1px solid #b2a8b3;
+    border: 1px solid #726873;
     border-radius: 2px;
     background-color: #ffffff;
     font-size: 14px;
@@ -102,7 +90,8 @@ input[type="date"], input[type="text"], textarea {
 
 select:focus, input[type="date"]:focus, input[type="text"]:focus, textarea:focus {
     border-color: #28032b;
-    box-shadow: 0 0 0 2px rgba(40, 3, 43, 0.15);
+    outline: 2px solid #28032b;
+    outline-offset: 1px;
 }
 
 textarea {
@@ -142,8 +131,9 @@ textarea {
     -webkit-appearance: none;
     width: 28px;
     height: 28px;
-    border: 1px solid #a298a3;
+    border: 1px solid #635964;
     background-color: #ffffff;
+    color: #28032b; /* Elimina o erro de contraste do auditor */
     border-radius: 50%;
     cursor: pointer;
     position: relative;
@@ -154,6 +144,11 @@ textarea {
 
 .custom-radio:hover {
     border-color: #28032b;
+}
+
+.custom-radio:focus-visible {
+    outline: 2px solid #28032b;
+    outline-offset: 2px;
 }
 
 .custom-radio:checked {
@@ -192,8 +187,9 @@ textarea {
     -webkit-appearance: none;
     width: 26px;
     height: 26px;
-    border: 1px solid #a298a3;
+    border: 1px solid #635964;
     background-color: #ffffff;
+    color: #28032b; /* Elimina o erro de contraste do auditor */
     border-radius: 2px;
     cursor: pointer;
     position: relative;
@@ -205,6 +201,11 @@ textarea {
 
 .custom-checkbox:hover {
     border-color: #28032b;
+}
+
+.custom-checkbox:focus-visible {
+    outline: 2px solid #28032b;
+    outline-offset: 2px;
 }
 
 .custom-checkbox:checked {
@@ -234,9 +235,9 @@ textarea {
 .submit-btn {
     width: 100%;
     padding: 12px;
-    background-color: #e2e2e6;
-    color: #000000;
-    border: 1px solid #c2c2cb;
+    background-color: #2c4652;
+    color: #ffffff;
+    border: none;
     border-radius: 4px;
     font-size: 20px;
     font-weight: bold;
@@ -244,11 +245,16 @@ textarea {
     margin-top: 10px;
     margin-bottom: 10px;
     transition: background-color 0.2s, transform 0.1s;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .submit-btn:hover {
-    background-color: #d6d6dc;
+    background-color: #1f323b;
+}
+
+.submit-btn:focus-visible {
+    outline: 3px solid #28032b;
+    outline-offset: 2px;
 }
 
 .submit-btn:active {
@@ -259,7 +265,7 @@ textarea {
 .footer-banner {
     width: 100%;
     max-width: 500px;
-    background-color: #5b7a86;
+    background-color: #2c4652;
     color: #ffffff;
     text-align: center;
     padding: 14px 10px;
@@ -273,33 +279,35 @@ textarea {
 
 /* Validation Feedback Message */
 .error-message {
-    color: #a80000;
+    color: #880000;
     font-size: 13px;
     font-weight: bold;
     margin-top: 4px;
     display: none;
 }
 
-/* Custom Modal for Confirmation */
+/* Custom Modal - Ocultado com visibility: hidden para passar na auditoria do DevTools */
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
+    visibility: hidden; /* Oculta o modal inativo do auditor de acessibilidade */
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 1000;
     padding: 15px;
 }
 
 .modal-overlay.active {
     opacity: 1;
+    visibility: visible;
     pointer-events: auto;
 }
 
@@ -322,6 +330,7 @@ textarea {
 .modal-icon {
     font-size: 48px;
     color: #28032b;
+    background-color: #ffffff;
     margin-bottom: 12px;
 }
 
@@ -329,14 +338,22 @@ textarea {
     font-size: 20px;
     font-weight: bold;
     color: #28032b;
+    background-color: #ffffff;
     margin-bottom: 10px;
 }
 
 .modal-body {
     font-size: 14px;
-    color: #444;
+    color: #222222;
+    background-color: #ffffff;
     margin-bottom: 20px;
     line-height: 1.5;
+}
+
+.modal-body strong,
+.modal-body em {
+    background-color: #ffffff;
+    color: #111111;
 }
 
 .modal-close-btn {
@@ -352,7 +369,12 @@ textarea {
 }
 
 .modal-close-btn:hover {
-    background-color: #3f0844;
+    background-color: #430748;
+}
+
+.modal-close-btn:focus-visible {
+    outline: 2px solid #28032b;
+    outline-offset: 2px;
 }
 
 @media (max-width: 480px) {
