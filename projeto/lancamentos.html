@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171513">
+  <meta name="description" content="Uma página de dicas de filmes para quem ama o cinema. Descubra clássicos e novidades no CineClube.">
+  <meta name="author" content="Anderson de Souza das Neves">
+  <title>CineClube — histórias que emocionam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos/cineclube.css">
+  <script src="scripts/cineclube.js" defer></script>
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand">
+        <img src="imagens/logo.png" alt="logotipo da empresa" width="120">
+      </a>
+      <button class="menu-toggle" id="menu-button" type="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+        <span class="menu-icon" aria-hidden="true">☰</span>
+      </button>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <ul id="menu">
+          <li><a href="index.html" data-page-link="home" aria-current="page">Página inicial</a></li>
+          <li><a href="lancamentos.html" data-page-link="launches">Lançamentos</a></li>
+          <li><a href="destaques.html" data-page-link="highlights">Destaques</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="site-main inner-main">
+    <section class="page-masthead masthead--launch" aria-labelledby="page-title">
+      <div class="masthead-content"><p class="eyebrow"><span class="eyebrow-line"></span>Novas histórias na tela</p><h1 id="page-title">Chegou a hora<br><em>de dar o play.</em></h1><p>Uma seleção de filmes recentes para descobrir, comentar e levar para a próxima sessão.</p></div>
+    </section>
+    <nav class="breadcrumbs" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">/</span><span aria-current="page">Lançamentos</span></nav>
+    <section class="content-section catalog-section" aria-labelledby="launch-title">
+      <div class="section-heading section-heading-compact"><div><p class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span>Novidades para sua lista</p><h2 id="launch-title">Lançamentos</h2></div><p class="catalog-count">04 histórias selecionadas</p></div>
+      <p class="section-intro">Uma mistura de aventura, emoção e boas surpresas — com o ano de estreia indicado para facilitar a sua busca.</p>
+      <div class="film-grid">
+        <article class="film-card">
+          <div class="film-poster poster--dune" aria-hidden="true">
+            <img src="imagens/duna-parte-dois.webp" alt="Poster do filme Duna: Parte Dois" class="poster-image">
+          </div>
+          <div class="film-info"><div class="film-meta"><span>FICÇÃO CIENTÍFICA</span><span>2024</span></div><h3>Duna: Parte Dois</h3><p>Paul Atreides se une aos Fremen em uma jornada épica pelo destino de Arrakis.</p><p class="film-credit">Direção: Denis Villeneuve</p></div></article>
+        <article class="film-card">
+          <div class="film-poster poster--rivals" aria-hidden="true">
+            <img src="imagens/rivais.webp" alt="Poster do filme Rivais" class="poster-image">
+          </div>
+          <div class="film-info"><div class="film-meta"><span>DRAMA</span><span>2024</span>
+          </div>
+          <h3>Rivais</h3><p>Uma ex-tenista transforma uma disputa esportiva em um duelo pessoal intenso.</p><p class="film-credit">Direção: Luca Guadagnino</p></div></article>
+        <article class="film-card">
+          <div class="film-poster poster--mind" aria-hidden="true">
+            <img src="imagens/divertida-mente-2.webp" alt="Poster do filme Divertida Mente 2" class="poster-image">
+          </div>
+          <div class="film-info"><div class="film-meta"><span>ANIMAÇÃO</span><span>2024</span>
+          </div><h3>Divertida Mente 2</h3><p>Riley cresce — e novas emoções chegam para bagunçar, expandir e enriquecer a central de comando.</p><p class="film-credit">Animação · Família</p></div></article>
+        <article class="film-card">
+          <div class="film-poster poster--still" aria-hidden="true">
+           <img src="imagens/ainda-estou-aqui.webp" alt="Poster do filme Ainda Estou Aqui" class="poster-image">
+          </div>
+          <div class="film-info"><div class="film-meta"><span>DRAMA</span><span>2024</span></div><h3>Ainda Estou Aqui</h3><p>Em meio à ditadura, Eunice Paiva luta para manter a família unida e buscar respostas.</p><p class="film-credit">Direção: Walter Salles</p></div></article>
+      </div>
+      <p class="catalog-note">Os títulos são sugestões editoriais. A disponibilidade para assistir pode variar conforme a região e o serviço de streaming.</p>
+    </section>
+    <section class="editorial-callout" aria-labelledby="launch-callout"><div class="callout-mark" aria-hidden="true">✳</div><div><p class="eyebrow">Tem história para todo momento</p><h2 id="launch-callout">Que tal revisitar um clássico?</h2></div><a class="button button-outline" href="destaques.html">Ver os destaques <span aria-hidden="true">→</span></a></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="brand brand-footer">
+         <img src="imagens/logo.png" alt="logotipo da empresa" width="120">
+      </a>
+      <div class="footer-copy">
+        <p>© <span id="anoAtual"></span> CineClube · Anderson Neves.</p>
+        <p>Última atualização: <time id="dataModificacao"></time></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
