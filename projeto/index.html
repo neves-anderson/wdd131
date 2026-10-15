@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#171513">
   <meta name="description" content="Uma página de dicas de filmes para quem ama o cinema. Descubra clássicos e novidades no CineClube.">
   <meta name="author" content="Anderson de Souza das Neves">
-  <title>CineClube — histórias que emocionam</title>
+  <title>CineClube — Histórias que emocionam</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
@@ -16,14 +16,14 @@
 <body data-page="home">
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand">
-        <img src="imagens/logo.png" alt="logotipo da empresa" width="120">
+      <a class="brand" href="index.html" aria-label="CineClube — Página inicial">
+        <img src="imagens/logo.png" alt="Logotipo da empresa CineClube" width="120" height="40" loading="eager">
       </a>
       <button class="menu-toggle" id="menu-button" type="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
         <span class="menu-icon" aria-hidden="true">☰</span>
       </button>
-      <nav class="site-nav" aria-label="Navegação principal">
-        <ul id="menu">
+      <nav class="site-nav" id="menu" aria-label="Navegação principal">
+        <ul>
           <li><a href="index.html" data-page-link="home" aria-current="page">Página inicial</a></li>
           <li><a href="lancamentos.html" data-page-link="launches">Lançamentos</a></li>
           <li><a href="destaques.html" data-page-link="highlights">Destaques</a></li>
@@ -33,10 +33,11 @@
   </header>
 
   <main id="conteudo" class="site-main">
-    <section class="hero-carousel" data-carousel role="region" aria-roledescription="carrossel" aria-label="Em destaque">
+    <!-- Hero Carousel -->
+    <section class="hero-carousel" data-carousel aria-roledescription="carrossel" aria-label="Filmes em destaque no CineClube">
       <div class="hero-slides" id="hero-slides">
         <article class="hero-slide is-active" data-slide aria-roledescription="slide" aria-label="1 de 3" aria-hidden="false">
-          <img class="hero-image" src="imagens/sala-classica.jpg" alt="Sala de cinema clássica com poltronas vermelhas e tela iluminada">
+          <img class="hero-image" src="imagens/sala-classica.jpg" alt="Sala de cinema clássica com poltronas vermelhas e tela iluminada" width="1200" height="600" loading="eager">
           <div class="hero-shade"></div>
           <div class="hero-content">
             <p class="eyebrow"><span class="eyebrow-line"></span>Um clube para quem ama cinema</p>
@@ -46,7 +47,7 @@
           </div>
         </article>
         <article class="hero-slide" data-slide aria-roledescription="slide" aria-label="2 de 3" aria-hidden="true">
-          <img class="hero-image" src="imagens/sala-escura.jpg" alt="Fileiras de poltronas em uma sala de cinema escura">
+          <img class="hero-image" src="imagens/sala-escura.jpg" alt="Fileiras de poltronas em uma sala de cinema escura" width="1200" height="600" loading="lazy">
           <div class="hero-shade"></div>
           <div class="hero-content">
             <p class="eyebrow"><span class="eyebrow-line"></span>Para a próxima sessão</p>
@@ -56,7 +57,7 @@
           </div>
         </article>
         <article class="hero-slide" data-slide aria-roledescription="slide" aria-label="3 de 3" aria-hidden="true">
-          <img class="hero-image" src="imagens/sessao-cheia.jpg" alt="Público reunido em uma sessão de cinema">
+          <img class="hero-image" src="imagens/sessao-cheia.jpg" alt="Público reunido em uma sessão de cinema" width="1200" height="600" loading="lazy">
           <div class="hero-shade"></div>
           <div class="hero-content">
             <p class="eyebrow"><span class="eyebrow-line"></span>Clássicos e novidades</p>
@@ -67,7 +68,7 @@
         </article>
       </div>
       <div class="carousel-controls">
-        <div class="carousel-dots" role="group" aria-label="Escolher slide">
+        <div class="carousel-dots" aria-label="Escolher slide">
           <button class="carousel-dot is-active" type="button" data-slide-to="0" aria-label="Mostrar slide 1 de 3" aria-pressed="true"></button>
           <button class="carousel-dot" type="button" data-slide-to="1" aria-label="Mostrar slide 2 de 3" aria-pressed="false"></button>
           <button class="carousel-dot" type="button" data-slide-to="2" aria-label="Mostrar slide 3 de 3" aria-pressed="false"></button>
@@ -80,6 +81,7 @@
       <p class="visually-hidden" data-carousel-status aria-live="polite" aria-atomic="true">Slide 1 de 3</p>
     </section>
 
+    <!-- Escolhas CineClube -->
     <section class="content-section" aria-labelledby="home-films-title">
       <div class="section-heading">
         <div>
@@ -90,63 +92,20 @@
       </div>
       <p class="section-intro">Filmes de diferentes tempos e lugares, reunidos para inspirar sua próxima sessão.</p>
       
-      <div class="film-grid">
-        <!-- Filme 1: Cidade dos Anjos -->
-        <article class="film-card">
-          <div class="film-poster poster--city">
-            <img src="imagens/cidade-dos-anjos.webp" alt="Pôster do filme Cidade dos Anjos">
-          </div>
-          <div class="film-info">
-            <div class="film-meta"><span>ROMANCE</span><span>1998</span></div>
-            <h3>Cidade dos Anjos</h3>
-            <p>Uma médica e um anjo se encontram em uma história delicada sobre escolha e humanidade.</p>
-          </div>
-        </article>
-
-        <!-- Filme 2: A Chegada -->
-        <article class="film-card">
-          <div class="film-poster poster--arrival">
-            <img src="imagens/a-chegada.webp" alt="Pôster do filme A Chegada">
-          </div>
-          <div class="film-info">
-            <div class="film-meta"><span>FICÇÃO CIENTÍFICA</span><span>2016</span></div>
-            <h3>A Chegada</h3>
-            <p>Uma linguista tenta encontrar uma linguagem comum com visitantes de outro mundo.</p>
-          </div>
-        </article>
-
-        <!-- Filme 3: Tudo em Todo Lugar ao Mesmo Tempo -->
-        <article class="film-card">
-          <div class="film-poster poster--multiverse">
-            <img src="imagens/tudo-em-todo-lugar-ao-mesmo-tempo.webp" alt="Pôster do filme Tudo em Todo Lugar ao Mesmo Tempo">
-          </div>
-          <div class="film-info">
-            <div class="film-meta"><span>AVENTURA</span><span>2022</span></div>
-            <h3>Tudo em Todo Lugar ao Mesmo Tempo</h3>
-            <p>Uma aventura multiversal sobre família, identidade e as infinitas possibilidades da vida.</p>
-          </div>
-        </article>
-
-        <!-- Filme 4: Central do Brasil -->
-        <article class="film-card">
-          <div class="film-poster poster--central">
-            <img src="imagens/central-do-brasil.webp" alt="Pôster do filme Central do Brasil">
-          </div>
-          <div class="film-info">
-            <div class="film-meta"><span>DRAMA</span><span>1998</span></div>
-            <h3>Central do Brasil</h3>
-            <p>Uma ex-professora e um menino cruzam o país em busca de respostas e de um novo começo.</p>
-          </div>
-        </article>
-      </div>
+      <!-- Grade preenchida dinamicamente via JS -->
+      <div class="film-grid" id="filmesLancamentosGrid"></div>
     </section>
 
     <section class="editorial-callout" aria-labelledby="callout-title">
       <div class="callout-mark" aria-hidden="true">✳</div>
-      <div><p class="eyebrow">O cinema é melhor em boa companhia</p><h2 id="callout-title">Qual história vai ficar com você?</h2></div>
+      <div>
+        <p class="eyebrow">O cinema é melhor em boa companhia</p>
+        <h2 id="callout-title">Qual história vai ficar com você?</h2>
+      </div>
       <a class="button button-outline" href="lancamentos.html">Conheça os lançamentos <span aria-hidden="true">→</span></a>
     </section>
 
+    <!-- Formulário Newsletter -->
     <section class="newsletter-section" aria-labelledby="newsletter-title">
       <div class="newsletter-copy">
         <p class="eyebrow"><span class="eyebrow-line"></span>Bilheteria de novidades</p>
@@ -159,29 +118,32 @@
           <input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" aria-describedby="newsletter-note newsletter-status" required>
           <button class="button button-gold" type="submit">Quero receber novidades <span aria-hidden="true">→</span></button>
         </div>
-        <label class="newsletter-consent"><input name="consent" type="checkbox" required><span>Aceito receber novidades do CineClube por e-mail.</span></label>
+        <label class="newsletter-consent">
+          <input name="consent" type="checkbox" required>
+          <span>Aceito receber novidades do CineClube por e-mail.</span>
+        </label>
         <p class="newsletter-note" id="newsletter-note">Receba semanalmente dicas e novidades sobre filmes diretamente no seu e-mail.</p>
         <p class="newsletter-status" id="newsletter-status" data-newsletter-status role="status" aria-live="polite"></p>
       </form>
     </section>
 
     <!-- Modal de Confirmação -->
-    <div class="modal-overlay" id="successModal">
-        <div class="modal-card">
-            <div class="modal-icon">👍</div>
-            <div class="modal-title">Inscrição Confirmada!</div>
-            <div class="modal-body" id="modalContent">
-                Obrigado por se juntar ao CineClube. Em breve, você receberá novidades e recomendações de filmes no seu e-mail!
-            </div>
-            <button class="modal-close-btn" id="closeModalBtn">Fechar</button>
-        </div>
+    <div class="modal-overlay" id="successModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+      <div class="modal-card">
+        <div class="modal-icon" aria-hidden="true">👍</div>
+        <h3 class="modal-title" id="modalTitle">Inscrição Confirmada!</h3>
+        <p class="modal-body" id="modalContent">
+          Obrigado por se juntar ao CineClube. Em breve, você receberá novidades e recomendações de filmes no seu e-mail!
+        </p>
+        <button class="modal-close-btn" id="closeModalBtn" type="button">Fechar</button>
+      </div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <a class="brand brand-footer">
-         <img src="imagens/logo.png" alt="logotipo da empresa" width="120">
+      <a class="brand brand-footer" href="index.html" aria-label="CineClube — Página inicial">
+        <img src="imagens/logo.png" alt="Logotipo da empresa CineClube" width="120" height="40" loading="lazy">
       </a>
       <div class="footer-copy">
         <p>© <span id="anoAtual"></span> CineClube · Anderson Neves.</p>

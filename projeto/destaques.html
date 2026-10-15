@@ -4,214 +4,86 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#171513">
-  <meta name="description" content="Uma página de dicas de filmes para quem ama o cinema. Descubra clássicos e novidades no CineClube.">
+  <meta name="description" content="Uma seleção especial de filmes clássicos e favoritos da curadoria do CineClube.">
   <meta name="author" content="Anderson de Souza das Neves">
-  <title>CineClube — histórias que emocionam</title>
+  <title>CineClube — Filmes em Destaque</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilos/cineclube.css">
   <script src="scripts/cineclube.js" defer></script>
 </head>
-<body data-page="home">
+<body data-page="highlights">
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html" aria-label="CineClube — Página inicial">
-        <img src="imagens/logo.png" alt="logotipo da empresa" width="120">
+        <img src="imagens/logo.png" alt="Logotipo da empresa CineClube" width="120" height="40" loading="eager">
       </a>
       <button class="menu-toggle" id="menu-button" type="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
         <span class="menu-icon" aria-hidden="true">☰</span>
       </button>
-      <nav class="site-nav" aria-label="Navegação principal">
-        <ul id="menu">
+      <nav class="site-nav" id="menu" aria-label="Navegação principal">
+        <ul>
           <li><a href="index.html" data-page-link="home">Página inicial</a></li>
           <li><a href="lancamentos.html" data-page-link="launches">Lançamentos</a></li>
-          <li><a href="destaques.html" data-page-link="highlights">Destaques</a></li>
+          <li><a href="destaques.html" data-page-link="highlights" aria-current="page">Destaques</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="main-content container">
-        <!-- Hero Banner -->
-        <section class="hero-banner">
-            <div class="hero-badge">
-                <span class="line"></span>
-                <span>FILMES PARA REVIVER — E REDESCOBRIR</span>
-            </div>
-            <h1>Histórias que<br><em>não saem de cena.</em></h1>
-            <p>Favoritos, clássicos e filmes que sempre encontram um novo motivo para voltar à tela.</p>
-        </section>
+  <main class="main-content container site-main">
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="hero-badge">
+        <span class="line"></span>
+        <span>FILMES PARA REVIVER — E REDESCOBRIR</span>
+      </div>
+      <h1>Histórias que<br><em>não saem de cena.</em></h1>
+      <p>Favoritos, clássicos e filmes que sempre encontram um novo motivo para voltar à tela.</p>
+    </section>
 
-        <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            <a href="index.html">Início</a> / <span>Destaques</span>
+    <!-- Breadcrumb corrigido para conformidade com o validador HTML -->
+    <nav class="breadcrumb" aria-label="Navegação estrutural">
+      <a href="index.html">Início</a> <span aria-hidden="true">/</span> <span aria-current="page">Destaques</span>
+    </nav>
+
+    <!-- Seção Destaques -->
+    <section class="destaques-section" aria-labelledby="highlights-title">
+      <div class="section-header-top">
+        <div class="section-titles">
+          <span class="sub-label">FAVORITOS DA CURADORIA</span>
+          <h2 id="highlights-title">Destaques</h2>
         </div>
+        <span class="counter" id="destaquesCounter">Carregando histórias...</span>
+      </div>
+      <p class="section-desc">Algumas histórias atravessam gerações. Aqui, cada escolha tem personalidade, emoção e espaço para ficar com você.</p>
 
-        <!-- Seção Destaques -->
-        <section class="destaques-section">
-            <div class="section-header-top">
-                <div class="section-titles">
-                    <span class="sub-label">FAVORITOS DA CURADORIA</span>
-                    <h2>Destaques</h2>
-                </div>
-                <span class="counter">08 Histórias selecionadas</span>
-            </div>
-            <p class="section-desc">Algumas histórias atravessam gerações. Aqui, cada escolha tem personalidade, emoção e espaço para ficar com você.</p>
+      <!-- Grid de Cards (Preenchido dinamicamente via JavaScript com lazy loading) -->
+      <div class="cards-grid" id="moviesGrid"></div>
 
-            <!-- Grid de Cards -->
-            <div class="cards-grid" id="moviesGrid">
-                <!-- Card 1 -->
-                <article class="movie-card">
-                    <div class="card-poster poster-1">
-                        <img src="imagens/o-poderoso-chefao.webp" alt="Poster do filme O Poderoso Chefão" class="poster-image">
-                    </div>
-                    <div class="card-body">
-                        <div class="card-meta-info">
-                            <span class="genre">DRAMA</span>
-                            <span class="year">1972</span>
-                        </div>
-                        <h4 class="movie-title">O Poderoso Chefão</h4>
-                        <p class="movie-synopsis">A família Corleone, seus laços e conflitos em um dos grandes épicos do cinema.</p>
-                        <span class="director">Direção: Francis Ford Coppola</span>
-                    </div>
-                </article>
+      <p class="editorial-notice">Os títulos são sugestões editoriais. A disponibilidade para assistir pode variar conforme a região e o serviço de streaming.</p>
+    </section>
 
-                <!-- Card 2 -->
-                <article class="movie-card">
-                    <div class="card-poster poster-2">
-                        <img src="imagens/matrix.webp" alt="Poster do filme Matrix" class="poster-image">
-                    </div>
-                    <div class="card-body">
-                        <div class="card-meta-info">
-                            <span class="genre">FICÇÃO CIENTÍFICA</span>
-                            <span class="year">1999</span>
-                        </div>
-                        <h4 class="movie-title">Matrix</h4>
-                        <p class="movie-synopsis">Um hacker começa a questionar a realidade e descobre que o mundo esconde outra camada.</p>
-                        <span class="director">Direção: Lana e Lilly Wachowski</span>
-                    </div>
-                </article>
-
-                <!-- Card 3 -->
-                <article class="movie-card">
-                    <div class="card-poster poster-3">
-                       <img src="imagens/a-viagem-de-chihiro.webp" alt="Poster do filme A Viagem de Chihiro" class="poster-image">
-                    </div>
-                    <div class="card-body">
-                        <div class="card-meta-info">
-                            <span class="genre">ANIMAÇÃO</span>
-                            <span class="year">2001</span>
-                        </div>
-                        <h4 class="movie-title">A Viagem de Chihiro</h4>
-                        <p class="movie-synopsis">Uma jovem precisa encontrar coragem em um mundo mágico para salvar sua família.</p>
-                        <span class="director">Direção: Hayao Miyazaki</span>
-                    </div>
-                </article>
-
-                <!-- Card 4 -->
-                <article class="movie-card">
-                    <div class="card-poster poster-4">
-                        <img src="imagens/cidade-dos-anjos.webp" alt="Poster do filme Cidade dos Anjos" class="poster-image">
-                    </div>
-                    <div class="card-body">
-                        <div class="card-meta-info">
-                            <span class="genre">ROMANCE</span>
-                            <span class="year">1998</span>
-                        </div>
-                        <h4 class="movie-title">Cidade dos Anjos</h4>
-                        <p class="movie-synopsis">Uma médica e um anjo se encontram em uma história delicada sobre amor e escolhas.</p>
-                        <span class="director">Direção: Brad Silberling</span>
-                    </div>
-                </article>
-
-                <!-- Card 5 -->
-                <article class="movie-card">
-                    <div class="card-poster poster-5">
-                        <img src="imagens/central-do-brasil.webp" alt="Poster do filme Central do Brasil" class="poster-image">
-                    </div>
-                    <div class="card-body">
-                        <div class="card-meta-info">
-                            <span class="genre">DRAMA</span>
-                            <span class="year">1998</span>
-                        </div>
-                        <h4 class="movie-title">Central do Brasil</h4>
-                        <p class="movie-synopsis">Uma viagem pelo país se transforma em uma relação inesperada de afeto e esperança.</p>
-                        <span class="director">Direção: Walter Salles</span>
-                    </div>
-                </article>
-
-                <!-- Card 6 -->
-                <article class="movie-card">
-                    <div class="card-poster poster-3">
-                        <img src="imagens/o-resgate-soldado-ryan.webp" alt="Poster do filme O Resgate do Soldado Ryan" class="poster-image">
-                    </div>
-                    <div class="card-body">
-                        <div class="card-meta-info">
-                            <span class="genre">DRAMA - GUERRA</span>
-                            <span class="year">1998</span>
-                        </div>
-                        <h4 class="movie-title">O Resgate do Soldado Ryan</h4>
-                        <p class="movie-synopsis">O filme retrata a Segunda Guerra Mundial e a invasão da Normandia, mostrando o heroísmo e os sacrifícios dos soldados que precisam procurar o soldado Ryan e garantir o seu retorno, com vida, para casa..</p>
-                        <span class="director">Direção: Steven Spielberg</span>
-                    </div>
-                </article>
-
-                <!-- Card 7 -->
-                <article class="movie-card">
-                    <div class="card-poster poster-4">
-                       <img src="imagens/a-chegada.webp" alt="Poster do filme A Chegada" class="poster-image">
-                    </div>
-                    <div class="card-body">
-                        <div class="card-meta-info">
-                            <span class="genre">FICÇÃO CIENTÍFICA</span>
-                            <span class="year">2016</span>
-                        </div>
-                        <h4 class="movie-title">A Chegada</h4>
-                        <p class="movie-synopsis">Uma linguista tenta encontrar uma linguagem comum com visitantes de outro mundo..</p>
-                        <span class="director">Direção: Denis Villeneuve</span>
-                    </div>
-                </article>
-
-                <!-- Card 8 -->
-                <article class="movie-card">
-                    <div class="card-poster poster-5">
-                        <img src="imagens/tudo-em-todo-lugar-ao-mesmo-tempo.webp" alt="Poster do filme Tudo em Todo Lugar ao Mesmo Tempo" class="poster-image">
-                    </div>
-                    <div class="card-body">
-                        <div class="card-meta-info">
-                            <span class="genre">DRAMA</span>
-                            <span class="year">1998</span>
-                        </div>
-                        <h4 class="movie-title">Tudo em Todo Lugar ao Mesmo Tempo</h4>
-                        <p class="movie-synopsis">Uma viagem pelo país se transforma em uma relação inesperada de afeto e esperança.</p>
-                        <span class="director">Direção: Daniel Kwan, Daniel Scheinert</span>
-                    </div>
-                </article>
-            </div>
-
-            <p class="editorial-notice">Os títulos são sugestões editoriais. A disponibilidade para assistir pode variar conforme a região e o serviço de streaming.</p>
-        </section>
-
-        <!-- CTA Bottom Banner -->
-        <section class="cta-banner">
-            <div class="cta-content">
-                <div class="cta-sparkle">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2L14.39 9.61L22 12L14.39 14.39L12 22L9.61 14.39L2 12L9.61 9.61L12 2Z" fill="#C5A880"/>
-                    </svg>
-                    <span>SEMPRE CABE UMA NOVIDADE</span>
-                </div>
-                <h3>A próxima descoberta está por vir.</h3>
-            </div>
-            <a href="lancamentos.html" class="cta-button">Ver lançamentos &rarr;</a>
-        </section>
-    </main>
+    <!-- CTA Bottom Banner -->
+    <section class="cta-banner">
+      <div class="cta-content">
+        <div class="cta-sparkle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2L14.39 9.61L22 12L14.39 14.39L12 22L9.61 14.39L2 12L9.61 9.61L12 2Z" fill="#C5A880"/>
+          </svg>
+          <span>SEMPRE CABE UMA NOVIDADE</span>
+        </div>
+        <h3>A próxima descoberta está por vir.</h3>
+      </div>
+      <a href="lancamentos.html" class="cta-button">Ver lançamentos &rarr;</a>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <a class="brand brand-footer">
-         <img src="imagens/logo.png" alt="logotipo da empresa" width="120">
+      <a class="brand brand-footer" href="index.html" aria-label="CineClube — Página inicial">
+        <img src="imagens/logo.png" alt="Logotipo da empresa CineClube" width="120" height="40" loading="lazy">
       </a>
       <div class="footer-copy">
         <p>© <span id="anoAtual"></span> CineClube · Anderson Neves.</p>
